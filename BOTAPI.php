@@ -31,6 +31,6 @@ $obj = json_decode($response);
 //	echo $val->{'example'}."<br>"; 
 //}
 //echo $response;
-echo $obj->{'last_updated'};
+echo $obj->{'period'};
 }
 ?>
