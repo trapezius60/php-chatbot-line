@@ -15,7 +15,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 	$host 		= "localhost";
 	$user 		= "root";
 	$password 	= "";
-	$database 	= "my-database-name-here";
+	$database 	= "lineforensicmnrh";
 	
 	define("APP_ENVIRONMENT", "Development");
 	define("APP_BASE_URL", "http://localhost");
@@ -30,7 +30,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 	$database 			= substr($cleardb_url["heroku_04736a2bbd78072?reconnect=true"],1);
 
 	define("APP_ENVIRONMENT", "Production");
-	define("APP_BASE_URL", "https://my-app-name-here.herokuapp.com");
+	define("APP_BASE_URL", "https://dashboard.heroku.com");
 	#error_reporting(0); // turn OFF showing errors
 	error_reporting(E_ALL ^ E_NOTICE); // turn ON showing errors			
 
