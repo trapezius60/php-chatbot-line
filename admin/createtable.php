@@ -9,11 +9,13 @@ if($res){
 	echo "No DROP";
 }
 
-$sql = "CREATE TABLE data (
-    id int(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    keyword varchar(255),
-    intent varchar(255)
+$sql = "CREATE TABLE line_log (
+    id int(11) NOT NULL auto_increment PRIMARY KEY,
+user_id` varchar(50) default NULL,
+text` varchar(600) default NULL,
+date_time` datetime default NULL
     )";
+
 
 if ($conn->query($sql) === TRUE) {
     echo "Table MyGuests created successfully 1 ";
