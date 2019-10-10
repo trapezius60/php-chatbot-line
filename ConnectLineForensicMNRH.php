@@ -27,7 +27,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 	$host				= $cleardb_url["us-cdbr-iron-east-05.cleardb.net"];
 	$user 				= $cleardb_url["b4d4ed34e9b742"];
 	$password			= $cleardb_url["e8ba9c70"];
-	$database 			= substr($cleardb_url["heroku_04736a2bbd78072?reconnect=true"],1);
+	$database 			= substr($cleardb_url["heroku_04736a2bbd78072"],1);
 
 	define("APP_ENVIRONMENT", "Production");
 	define("APP_BASE_URL", "https://dashboard.heroku.com");
@@ -37,7 +37,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 }
 
 // connect to the database server
-$db1 = mysqli_connect($host, $user, $password, $database) or die("Could not connect to database");
+$db1 = mysqli_connect($host, $user, $password) or die("Could not connect to database");
 
 // select the right database
 mysqli_select_db($db1, $database);
