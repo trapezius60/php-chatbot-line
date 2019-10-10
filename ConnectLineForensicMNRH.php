@@ -1,30 +1,10 @@
-<html>
-<head>
-<title>PHP & MySQL (mysqli)</title>
-</head>
-<body>
 <?php
+$url = parse_url(getenv("mysql://b4d4ed34e9b742:e8ba9c70@us-cdbr-iron-east-05.cleardb.net/heroku_04736a2bbd78072?reconnect=true"));
 
-	ini_set('display_errors', 1);
-	error_reporting(~0);
+$server = $url["us-cdbr-iron-east-05.cleardb.net"];
+$username = $url["b4d4ed34e9b742"];
+$password = $url["e8ba9c70"];
+$db = substr($url["heroku_04736a2bbd78072"], 1);
 
-	$serverName = "localhost";
-	$userName = "root";
-	$userPassword = "";
-	$dbName = "lineforensicmnrh";
-  
-	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-
-	if (mysqli_connect_errno())
-	{
-		echo "Database Connect Failed : " . mysqli_connect_error();
-	}
-	else
-	{
-		echo "Database Connected.";
-	}
-
-	mysqli_close($conn);
+$conn = new mysqli($server, $username, $password, $db);
 ?>
-</body>
-</html>
