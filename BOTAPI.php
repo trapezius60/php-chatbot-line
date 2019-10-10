@@ -31,6 +31,6 @@ $obj = json_decode($response);
 //	echo $val->{'example'}."<br>"; 
 //}
 //echo $response;
-echo $obj->{'timestamp'};
+echo $obj->{'rate'};
 }
 ?>
