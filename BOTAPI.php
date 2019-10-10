@@ -1,5 +1,5 @@
 <?php
-
+// ใช้ API ของ BOT (Bank of Thailand) https://apiportal.bot.or.th/bot/public/node/470
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -24,6 +24,7 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  $post_body = json_encode($response, JSON_UNESCAPED_UNICODE);
+  echo $post_body;
 }
 ?>
