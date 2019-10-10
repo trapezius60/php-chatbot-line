@@ -30,7 +30,7 @@ if ($err) {
 //{
 //	echo $val->{'example'}."<br>"; 
 //}
-  print $obj->{'timestamp'};
 
+echo $obj->{'Daily Weighted-average Interbank Exchange Rate - THB / USD'};
 }
 ?>
