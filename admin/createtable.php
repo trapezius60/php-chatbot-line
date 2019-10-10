@@ -11,9 +11,9 @@ if($res){
 
 $sql = "CREATE TABLE line_log (
     id int(11) NOT NULL auto_increment PRIMARY KEY,
-user_id` varchar(50),
-text` varchar(600),
-date_time` datetime
+user_id varchar(50),
+text varchar(600),
+date_time datetime
     )";
 
 
