@@ -24,12 +24,12 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  
- $obj = json_decode($response, JSON_UNESCAPED_UNICODE);
-foreach($obj as $val)
-{
-	echo $val->{'example'}."<br>"; 
-}
+var_dump(json_decode($response));  
+// $obj = json_decode($response, JSON_UNESCAPED_UNICODE);
+//foreach($obj as $val)
+//{
+//	echo $val->{'example'}."<br>"; 
+//}
   
 
 }
