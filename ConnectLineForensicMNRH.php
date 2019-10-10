@@ -37,7 +37,7 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 }
 
 // connect to the database server
-$db1 = mysqli_connect($host, $user, $password) or die("Could not connect to database");
+$db1 = mysqli_connect($host, $user, $password, $database) or die("Could not connect to database");
 
 // select the right database
 mysqli_select_db($db1, $database);
