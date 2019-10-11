@@ -41,23 +41,14 @@ if ($err) {
 } else {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
-  //Create a new array to hold the key=>value data
-$combined = [];
 
-foreach($arr["data"] as $i => $v){
-    //Find the relevant key in the Descriptions array and
-    //push this information information to the $combined array
-    $combined[$i] = $arr["pollution"][$i]["aqicn"]["maincn"];
- /* The above is essentially the same as
-    $combined["7905269096"] = "unique"; */
-  
+echo $arr[data]['country']; 
+echo $arr[data]['state'];  
+echo $arr[data]['city']; 
+echo $arr[data]['location']['coordinates'];
+echo $arr[current]['weather']['ts'];
+  echo $arr[current]['weather']['tp'];
 
-//echo $arr;  // Output: 65
-//echo $arr[data]['country'];  // Output: 80
-//echo $arr[data]['state'];  // Output: 78
-//echo $arr[data]['city']; // Output: 90
-//echo $arr[data]['location'];
-//echo $response;
   
 } 
 ?>
