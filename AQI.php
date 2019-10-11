@@ -39,10 +39,15 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-   // Convert JSON string to Array
-  $response = json_decode($display, true);
-  print_r($display);        // Dump all data of the Array
-  echo $display[0]["city"]; // Access Array data
+// Decode JSON data to PHP associative array
+$arr = json_decode($response, true);
+ 
+// Loop through the associative array
+foreach($arr as $key=>$value){
+    echo $key . " => " . $value . "<br>";
+}
+echo "<hr>";
   //echo $response;
   
-} ?>
+} 
+?>
