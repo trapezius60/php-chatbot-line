@@ -41,12 +41,11 @@ if ($err) {
 } else {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
- 
-// Loop through the associative array
-foreach($arr as $key=>$value){
-    echo $key . " => " . $value . "<br>";
-}
-echo "<hr>";
+// Access values from the associative array
+echo $arr["city"];  // Output: 65
+echo $arr["state"];  // Output: 80
+echo $arr["country"];   // Output: 78
+echo $arr["location"];  // Output: 90
   //echo $response;
   
 } 
