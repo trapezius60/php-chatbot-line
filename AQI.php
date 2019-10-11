@@ -48,7 +48,7 @@ echo $arr[data]['city'];
 //echo $arr[data]['location']['coordinates'];
 //echo $arr[current][weather]['ts'];
  // echo $arr[current][weather]['tp'];
-eccho $response;
+echo $response;
   
 } 
 ?>
