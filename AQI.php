@@ -10,8 +10,8 @@
 //             >>{"status":"success","data":[{"city":"Nakhon Ratchasima"}]}
 //Specific data in city
 //api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key={{YOUR_API_KEY}}
-//api.airvisual.com/v2/city?city=Nakhon Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
-//ถ้าเป็นโคราชหรือเชียงใหม่จะไม่มา แต่ถ้าเป็น usa จะมาหมดดังข้างล่าง
+//api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
+//{"status":"success","data":{"city":"Nakhon Ratchasima","state":"Nakhon Ratchasima","country":"Thailand","location":{"type":"Point","coordinates":[102.0775411,14.9723586]},"current":{"weather":{"ts":"2019-10-11T02:00:00.000Z","tp":27,"pr":1014,"hu":94,"ws":1.5,"wd":0,"ic":"50d"},"pollution":{"ts":"2019-10-11T01:00:00.000Z","aqius":78,"mainus":"p2","aqicn":36,"maincn":"p2"}}}}
 //api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
 //{"status":"success","data":{"city":"Los Angeles","state":"California","country":"USA","location":{"type":"Point","coordinates":[-118.2417,34.0669]},"current":{"weather":{"ts":"2019-10-11T01:00:00.000Z","tp":23,"pr":1011,"hu":50,"ws":1.5,"wd":260,"ic":"01n"},"pollution":{"ts":"2019-10-11T01:00:00.000Z","aqius":48,"mainus":"p2","aqicn":17,"maincn":"p2"}}}}
 
@@ -39,6 +39,10 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+   // Convert JSON string to Array
+  $response = json_decode($display, true);
+  print_r($display);        // Dump all data of the Array
+  echo $display[0]["city"]; // Access Array data
+  //echo $response;
   
 } ?>
