@@ -11,6 +11,9 @@
 //Specific data in city
 //api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key={{YOUR_API_KEY}}
 //api.airvisual.com/v2/city?city=Nakhon Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
+//ถ้าเป็นโคราชหรือเชียงใหม่จะไม่มา แต่ถ้าเป็น usa จะมาหมดดังข้างล่าง
+//api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
+//{"status":"success","data":{"city":"Los Angeles","state":"California","country":"USA","location":{"type":"Point","coordinates":[-118.2417,34.0669]},"current":{"weather":{"ts":"2019-10-11T01:00:00.000Z","tp":23,"pr":1011,"hu":50,"ws":1.5,"wd":260,"ic":"01n"},"pollution":{"ts":"2019-10-11T01:00:00.000Z","aqius":48,"mainus":"p2","aqicn":17,"maincn":"p2"}}}}
 
 // LINK documentation >> https://documenter.getpostman.com/view/507654/airvisual-api/2Fvvgg?version=latest
 //                    >>   key = c97b1c11-d68f-4acc-9ac9-13f8673e2844 (แทน {{YOUR_API_KEY}})
@@ -18,7 +21,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
+  CURLOPT_URL => "api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20RatchasimaThailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
