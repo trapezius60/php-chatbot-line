@@ -1,13 +1,15 @@
 <?php
 // List country
 //api.airvisual.com/v2/countries?key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
+//List Country & State
+//api.airvisual.com/v2/cities?state=Chiangmai&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
 // LINK documentation >> https://documenter.getpostman.com/view/507654/airvisual-api/2Fvvgg?version=latest
 
 // key = c97b1c11-d68f-4acc-9ac9-13f8673e2844 (แทน {{YOUR_API_KEY}})
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "api.airvisual.com/v2/cities?state=Chiangmai&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
+  CURLOPT_URL => "api.airvisual.com/v2/countries?key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
