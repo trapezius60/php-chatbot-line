@@ -4,6 +4,7 @@
 //List Country & State
 //api.airvisual.com/v2/cities?state=Chiangmai&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
 //api.airvisual.com/v2/cities?state=Chiang%20Mai&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
+//api.airvisual.com/v2/city?city=Nakhon Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
 // will return >> {"status":"success","data":[{"city":"Nakhon Ratchasima"}]}
 //Specific data in city
 //api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key={{YOUR_API_KEY}}
@@ -13,7 +14,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "api.airvisual.com/v2/city?city=Nakhon Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
+  CURLOPT_URL => "api.airvisual.com/v2/cities?state=Chiang%20Mai&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
