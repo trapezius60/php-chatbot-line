@@ -42,20 +42,13 @@ if ($err) {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
 
-//echo $arr[data]['country']; 
-//echo $arr[data]['state'];  
-//echo $arr[data]['city']; 
+echo $arr[data]['country']; 
+echo $arr[data]['state'];  
+echo $arr[data]['city']; 
 //echo $arr[data]['location']['coordinates'];
 //echo $arr[current][weather]['ts'];
  // echo $arr[current][weather]['tp'];
-for ($row = 0; $row < 4; $row++) {
-  echo "<p><b>Row number $row</b></p>";
-  echo "<ul>";
-  for ($col = 0; $col < 3; $col++) {
-    echo "<li>".$arr[$row][$col]."</li>";
-  }
-  echo "</ul>";
-}
+eccho $response;
   
 } 
 ?>
