@@ -40,7 +40,7 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 // Decode JSON data to PHP associative array
-$arr = json_decode($response, true);
+//$arr = json_decode($response, true);
 
 //echo $arr[data]['country']; 
 //echo $arr[data]['state'];  
