@@ -43,9 +43,10 @@ if ($err) {
 $arr = json_decode($response, true);
 // Access values from the associative array
 echo $arr;  // Output: 65
-//echo $arr["data:state"];  // Output: 80
-//echo $arr["country"];   // Output: 78
-//echo $arr["location"];  // Output: 90
+echo $arr[data]['country'];  // Output: 80
+echo $arr[data]['state'];  // Output: 78
+echo $arr[data]['city']; // Output: 90
+echo $arr[data]['location'];
 echo $response;
   
 } 
