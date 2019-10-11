@@ -42,10 +42,10 @@ if ($err) {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
 // Access values from the associative array
-echo $arr["data"];  // Output: 65
-echo $arr["data:state"];  // Output: 80
-echo $arr["country"];   // Output: 78
-echo $arr["location"];  // Output: 90
+echo $arr;  // Output: 65
+//echo $arr["data:state"];  // Output: 80
+//echo $arr["country"];   // Output: 78
+//echo $arr["location"];  // Output: 90
   //echo $response;
   
 } 
