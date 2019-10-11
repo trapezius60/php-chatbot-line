@@ -46,7 +46,7 @@ echo $arr;  // Output: 65
 //echo $arr["data:state"];  // Output: 80
 //echo $arr["country"];   // Output: 78
 //echo $arr["location"];  // Output: 90
-  //echo $response;
+echo $response;
   
 } 
 ?>
