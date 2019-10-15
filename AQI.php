@@ -1,8 +1,54 @@
+<?php  ob_start();  ?>
+
+<!doctype html>
 <html>
 <head>
-<title>PHP & MySQL (mysqli)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GenerateQRcode</title>
+<style>
+	* {
+		font: 14px tahoma;
+	}
+	body {
+		background: url(bg.jpg);
+		text-align: center;
+	}
+	form {
+		display: inline-block;
+		margin: 20px auto;
+		text-align: left;
+	}
+	[type=text]  {
+		width: 200px;
+		background: #ffc;
+		border: solid 1px gray;
+		border-right: none !important; 
+		border-radius: 4px 0px 0px 4px; 
+		margin-right: -3px;
+		padding-left: 3px;
+		padding-right: 5px;
+		height: 24px;
+		margin-bottom: 5px;
+	}
+	button {
+		background: #f60;
+		color: white;
+		border: solid 1px gray;
+		border-left: none !important; 
+		border-radius: 0px 4px 4px 0px; 
+		font-weight: bold;
+		margin-left: -3px; 
+		height: 28px;
+	}
+	button:hover {
+		color: aqua;
+	}
+</style>
 </head>
+
 <body>
+  
 <?php
 
 // List country
@@ -56,11 +102,13 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
          "สภาพอากาศ:: ". "<br>",
             "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
-          "มลพิษ:: ". "<br>",
-            "AQI (ugm3)" .$arr[data][current][pollution]['aqius'];
+          "AQI:: ". "<br>",
+            "PM2.5 (US AQI) " .$arr[data][current][pollution]['aqius'];
   
 } 
 
 ?>
+  <p> <a href = "https://www.airvisual.com/thailand/nakhon-ratchasima" target = "_blank">Link AQI visual</p> 
 </body>
 </html>
+<?php  ob_end_flush();  ?>
