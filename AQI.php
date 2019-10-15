@@ -53,7 +53,7 @@ $arr[data]['city']
   $arr[data]['location']['type']
   $arr[data]['location']['coordinates']
   $arr[current][weather]['ts']
-  $arr[current][weather]['tp']
+  $arr[current][weather]['tp'];
 echo $response;
   
 } 
