@@ -47,11 +47,11 @@ if ($err) {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
 
-echo $arr[data]['country'] ;
-echo $arr[data]['state'] ;
+echo $arr[data]['country']. "<br>",
+$arr[data]['state'] ;
 echo $arr[data]['city'] ;
 echo  $arr[data]['location']['type'];
-echo  $arr[data]['location']['coordinates'][0,0];
+echo  $arr[data]['location']['coordinates'];
 echo $arr[data][current][weather]['ts'];
  echo $arr[data][current][weather]['tp'];
 echo $response;
