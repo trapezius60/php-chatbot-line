@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GenerateQRcode</title>
+<title>AQI-Korat</title>
 <style>
 	* {
 		font: 14px tahoma;
@@ -96,10 +96,10 @@ $arr = json_decode($response, true);
 echo "ประเทศ " .$arr[data]['country']. "<br>",
       "จังหวัด " .$arr[data]['state']. "<br>", 
        "เมือง " .$arr[data]['city']. "<br>",
-       "ตำแหน่ง " .$arr[data]['location']['type']. "<br>",
+       //"ตำแหน่ง " .$arr[data]['location']['type']. "<br>",
         
          "วันที่-เวลา " .$arr[data][current][weather]['ts']. "<br>",
-         "สภาพอากาศ:: ". "<br>",
+        //"สภาพอากาศ:: ". "<br>",
             "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
           "AQI:: ". "<br>",
