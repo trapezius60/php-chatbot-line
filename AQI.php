@@ -45,7 +45,7 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 // Decode JSON data to PHP associative array
-//$arr = json_decode($response, true);
+$arr = json_decode($response, true);
 
 //echo $arr[data]['country']; 
 //echo $arr[data]['state'];  
@@ -56,22 +56,7 @@ if ($err) {
 echo $response;
   
 } 
-<script>
 
-jQuery(document).ready(function() { 
-
-   $.ajax({
-            url: "api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
-            type: 'GET',
-            dataType: 'json',
-            success: function(res) {
-               $('#result').html(res)
-            }
-        });
-
-})
-
-</script>
 ?>
 </body>
 </html>
