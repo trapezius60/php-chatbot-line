@@ -57,7 +57,7 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
             "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
           "มลพิษ:: ". "<br>",
-            "AQI " .$arr[data][pollution]['aqius'];
+            "AQI " .$arr[data][current][pollution]['aqius'];
   
 } 
 
