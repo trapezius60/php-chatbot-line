@@ -47,14 +47,17 @@ if ($err) {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
 
-echo $arr[data]['country']. "<br>",
-$arr[data]['state'] ;
-echo $arr[data]['city'] ;
-echo  $arr[data]['location']['type'];
-echo  $arr[data]['location']['coordinates'];
-echo $arr[data][current][weather]['ts'];
- echo $arr[data][current][weather]['tp'];
-echo $response;
+echo "ประเทศ" .$arr[data]['country']. "<br>",
+      "จังหวัด" .$arr[data]['state']. "<br>", 
+       "เมือง" .$arr[data]['city']. "<br>",
+       "ตำแหน่ง" .$arr[data]['location']['type']. "<br>",
+        "ตำแหน่ง GPS" .$arr[data]['location']['coordinates']. "<br>",
+         "วันที่ เวลา" .$arr[data][current][weather]['ts']. "<br>",
+         "สภาพอากาศ". "<br>",
+            "อุณหภูมิ (เซลเซียส)" .$arr[data][current][weather]['tp']. "<br>",
+            "ความชื้น (%)" .$arr[data][current][weather]['hu']. "<br>",
+          "มลพิษ". "<br>",
+            "AQI" .$arr[data][pollution][aqius];
   
 } 
 
