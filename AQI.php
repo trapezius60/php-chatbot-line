@@ -47,17 +47,17 @@ if ($err) {
 // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
 
-echo "ประเทศ" .$arr[data]['country']. "<br>",
-      "จังหวัด" .$arr[data]['state']. "<br>", 
-       "เมือง" .$arr[data]['city']. "<br>",
-       "ตำแหน่ง" .$arr[data]['location']['type']. "<br>",
-        "ตำแหน่ง GPS" .$arr[data]['location']['coordinates']. "<br>",
-         "วันที่ เวลา" .$arr[data][current][weather]['ts']. "<br>",
-         "สภาพอากาศ". "<br>",
-            "อุณหภูมิ (เซลเซียส)" .$arr[data][current][weather]['tp']. "<br>",
-            "ความชื้น (%)" .$arr[data][current][weather]['hu']. "<br>",
-          "มลพิษ". "<br>",
-            "AQI" .$arr[data][pollution][aqius];
+echo "ประเทศ " .$arr[data]['country']. "<br>",
+      "จังหวัด " .$arr[data]['state']. "<br>", 
+       "เมือง " .$arr[data]['city']. "<br>",
+       "ตำแหน่ง " .$arr[data]['location']['type']. "<br>",
+        
+         "วันที่-เวลา " .$arr[data][current][weather]['ts']. "<br>",
+         "สภาพอากาศ:: ". "<br>",
+            "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
+            "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
+          "มลพิษ:: ". "<br>",
+            "AQI " .$arr[data][pollution]['aqius'];
   
 } 
 
