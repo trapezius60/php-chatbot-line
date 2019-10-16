@@ -58,15 +58,16 @@
 		$strKeyword = $_GET["q"];
 	}
 ?>
-<?php
-	
- <form method="get" target="_blank">
+<form method="get" target="_blank">
 	<input type="text" type="submit" name="q" maxlength="5000" required> 
 	<input type='text' name='q' value='<?=$_GET['q'];?>' />
         <input type='submit' />
         <button>Input words</button><br><br>
   
 </form>
+<?php
+	
+ 
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
