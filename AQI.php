@@ -98,12 +98,12 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
        "เมือง " .$arr[data]['city']. "<br>",
        //"ตำแหน่ง " .$arr[data]['location']['type']. "<br>",
         
-         "วันที่-เวลา (UTC) ถ้าของไทยต้อง UTC+7 hr." .$arr[data][current][weather]['ts']. "<br>",
+         "วันที่-เวลา (UTC) ถ้าของไทยต้อง UTC+7 hr. update ทุก 1 hr. " .$arr[data][current][weather]['ts']. "<br>",
         //"สภาพอากาศ:: ". "<br>",
             "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
           "AQI:: ". "<br>",
-            "AQI (๊US AQI) " .$arr[data][current][pollution]['aqius'];
+            "AQI (US AQI) " .$arr[data][current][pollution]['aqius'];
   
 } 
 
