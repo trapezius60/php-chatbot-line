@@ -6,7 +6,7 @@
 <title>SentinelAnalysis</title>
 <style>
 	* {
-		font: 14px tahoma;
+		font: 16px tahoma;
 	}
 	body {
 		background: url(bg.jpg);
@@ -18,7 +18,7 @@
 		text-align: left;
 	}
 	[type=text]  {
-		width: 200px;
+		width: 400px;
 		background: #ffc;
 		border: solid 1px gray;
 		border-right: none !important; 
@@ -26,7 +26,7 @@
 		margin-right: -3px;
 		padding-left: 3px;
 		padding-right: 5px;
-		height: 24px;
+		height: 100px;
 		margin-bottom: 5px;
 	}
 	button {
@@ -37,7 +37,7 @@
 		border-radius: 0px 4px 4px 0px; 
 		font-weight: bold;
 		margin-left: -3px; 
-		height: 28px;
+		height: 100px;
 	}
 	button:hover {
 		color: aqua;
@@ -47,7 +47,6 @@
 <body>
 
 <form method="get" target="_blank">
-	<textarea name="q" cols="40" input type="text" type="submit" rows="4" required>ใส่ข้อความลงในช่องนี้</textarea>
 	<input type="text" type="submit" name="q" maxlength="5000" required>       
         <button>Input words</button><br><br>
 </form>
