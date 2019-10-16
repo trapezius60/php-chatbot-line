@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -45,19 +44,16 @@
 	}
 </style>
 </head>
-
 <body>
 
 <form method="get" target="_blank">
-	
-	<input type="text" type="submit" name="q" maxlength="5000" required> 
-	        
+	<input type="text" type="submit" name="q" maxlength="5000" required>       
         <button>Input words</button><br><br>
-  
 </form>
+	
 <?php
 	
- $strKeyword = $_GET["q"];
+$strKeyword = $_GET["q"];
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -81,16 +77,11 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  
-
   //echo $response;
    $arr = json_decode($response, true);
-     echo "คำที่ใช้ประเมิน " .$arr[@preprocess]['input']. "<br>", 
-     "แนวโน้ม " .$arr[@sentiment]['polarity'].  " ด้วยความเชื่อมั่นร้อยละ " .$arr[@sentiment]['score']. "<br>";
-      
+     echo "ข้อความที่ใช้ประเมิน คือ " ." ". .$arr[@preprocess]['input']. ." ". "<br>", 
+     "ข้อความดังกล่าวมีแนวโน้มแนวโน้ม " .$arr[@sentiment]['polarity'].  " ด้วยความเชื่อมั่นร้อยละ " .$arr[@sentiment]['score']. "<br>";      
 }
-	
 ?>
-
 </body>
 </html>
