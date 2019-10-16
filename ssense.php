@@ -22,12 +22,12 @@
 		background: #ffc;
 		border: solid 1px gray;
 		border-right: none !important; 
-		border-radius: 4px 0px 0px 4px; 
+		border-radius: 2px 0px 0px 2px; 
 		margin-right: -3px;
-		padding-left: 3px;
-		padding-right: 5px;
+		padding-left: 1px;
+		padding-right: 1px;
 		height: 100px;
-		margin-bottom: 5px;
+		margin-bottom: 1px;
 	}
 	button {
 		background: #f60;
@@ -37,7 +37,7 @@
 		border-radius: 0px 4px 4px 0px; 
 		font-weight: bold;
 		margin-left: -3px; 
-		height: 100px;
+		height: 108px;
 	}
 	button:hover {
 		color: aqua;
