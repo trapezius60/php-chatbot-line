@@ -83,10 +83,10 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  
 
   //echo $response;
-   $arr = json_decode($response, true);
+   $arr = json_decode(@$response, true);
      echo 
      "คำที่ใช้ประเมิน " .$arr[preprocess]['input']. "<br>", 
      "ความเชื่อมั่น (%) " .$arr[sentiment]['score']. "<br>",
