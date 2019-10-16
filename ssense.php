@@ -53,28 +53,24 @@
 
 	$strKeyword = null;
 
-	if(isset($_POST["q"]))
+	if(isset($_GET["q"]))
 	{
-		$strKeyword = $_POST["q"];
+		$strKeyword = $_GET["q"];
 	}
 ?>
 <?php
-	 //sentinel analysis 
-	 //if(@$_POST["q"] != '') {
-		
+ 
 $curl = curl_init();
  
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.aiforthai.in.th/ssense",
+  CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text=สาขานี้พนักงานน่ารักให้บริการดี",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "test",
-  CURLOPT_POSTFIELDS => "",
+  CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/x-www-form-urlencoded",
     "Apikey: lkEUrfOpTvUCOISqVdFDkm1KPyFpsLOz"
   )
 ));
@@ -83,12 +79,20 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
  
 curl_close($curl);
-
-		if ($err) {
+ 
+if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   echo $response;
-  
+
+  //echo $response;
+   $arr = json_decode($response, true);
+     echo 
+     "คำที่ใช้ประเมิน " .$arr[preprocess]['input']. "<br>", 
+     "ความเชื่อมั่น (%) " .$arr[sentiment]['score']. "<br>",
+      "เป็นลบ " .$arr[sentiment]['polarity-neg']. "<br>", 
+      "เป็นบวก " .$arr[sentiment]['polarity-pos']. "<br>", 
+      "แนวโน้ม " .$arr[sentiment]['polarity']. "<br>"; 
  
 }
 	//} else {
