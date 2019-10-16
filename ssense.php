@@ -59,9 +59,15 @@
 	}
 ?>
 <?php
- 
+	
+ <form method="post" target="_blank">
+	<input type="text" type="submit" name="q" maxlength="5000" required> 
+	<input name="q" type="text" id="q" value="<?php echo $strKeyword["q"];?>">
+       <button>Input words</button><br><br>
+  
+</form>
 $curl = curl_init();
- 
+
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text=$strKeyword",
   CURLOPT_RETURNTRANSFER => true,
@@ -93,11 +99,6 @@ if ($err) {
 }
 	
 ?>
-<form method="post" target="_blank">
-	<input type="text" type="submit" name="q" maxlength="5000" required> 
-    <button>Input words</button><br><br>
-	//<input  class="btn blue pull-right" type="submit" name="Submit" value="Login"/></div> 
-   
-</form>
+
 </body>
 </html>
