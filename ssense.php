@@ -80,7 +80,7 @@ if ($err) {
 } else {
   //echo $response;
    $arr = json_decode($response, true);
-     echo "ข้อความที่ใช้ประเมิน คือ " "<center>" "<b>".$arr[@preprocess]['input']. "<b/>"  "<br>", 
+     echo "ข้อความที่ใช้ประเมิน คือ " "<b>".$arr[@preprocess]['input']. "<b/>"  "<br>", 
      "ข้อความดังกล่าวมีแนวโน้มแนวโน้ม " .$arr[@sentiment]['polarity'].  " ด้วยความเชื่อมั่นร้อยละ " .$arr[@sentiment]['score'] ;      
 }
 ?>
