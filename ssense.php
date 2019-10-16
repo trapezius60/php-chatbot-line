@@ -60,10 +60,11 @@
 ?>
 <?php
 	
- <form method="post" target="_blank">
+ <form method="get" target="_blank">
 	<input type="text" type="submit" name="q" maxlength="5000" required> 
-	<input name="q" type="text" id="q" value="<?php echo $strKeyword["q"];?>">
-       <button>Input words</button><br><br>
+	<input type='text' name='q' value='<?=$_GET['q'];?>' />
+        <input type='submit' />
+        <button>Input words</button><br><br>
   
 </form>
 $curl = curl_init();
