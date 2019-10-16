@@ -63,7 +63,7 @@
 $curl = curl_init();
  
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text=สาขานี้พนักงานน่ารักให้บริการดี",
+  CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text=$strKeyword",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -88,17 +88,15 @@ if ($err) {
   //echo $response;
    $arr = json_decode($response, true);
      echo "คำที่ใช้ประเมิน " .$arr[@preprocess]['input']. "<br>", 
-     "ความเชื่อมั่น (%) " .$arr[@sentiment]['score']. "<br>",
-      "เป็นลบ " .$arr[@sentiment]['polarity-neg']. "<br>", 
-      "เป็นบวก " .$arr[@sentiment]['polarity-pos']. "<br>", 
-      "แนวโน้ม " .$arr[@sentiment]['polarity']. "<br>"; 
- 
+     "แนวโน้ม " .$arr[@sentiment]['polarity'].  " ด้วยความเชื่อมั่นร้อยละ " .$arr[@sentiment]['score']. "<br>";
+      
 }
 	
 ?>
 <form method="post" target="_blank">
-	<input type="text" name="q" maxlength="5000" required> 
+	<input type="text" type="submit" name="q" maxlength="5000" required> 
     <button>Input words</button><br><br>
+	//<input  class="btn blue pull-right" type="submit" name="Submit" value="Login"/></div> 
    
 </form>
 </body>
