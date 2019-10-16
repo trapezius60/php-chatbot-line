@@ -88,6 +88,7 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 $arr = json_decode($response, true);
-  echo $arr[data]['Original'];
+  //echo $arr[Original];
+	echo $str=str_replace("\r\n","",$arr);
 }
 ?>
