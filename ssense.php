@@ -1,4 +1,3 @@
-<?php  ob_start();  ?>
 
 <!doctype html>
 <html>
@@ -49,25 +48,33 @@
 
 <body>
 <?php
-if(@$_POST['q']) {
-	if($_POST['inputword'] == "") {
-echo "No Word";	
-exit('</body></html>');
-		ob_end_flush();
-	} else {
-		
+	ini_set('display_errors', 1);
+	error_reporting(~0);
+
+	$strKeyword = null;
+
+	if(isset($_POST["q"]))
+	{
+		$strKeyword = $_POST["q"];
+	}
+?>
+<?php
 	 //sentinel analysis 
+	 //if(@$_POST["q"] != '') {
+		
 $curl = curl_init();
  
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text=$inputwords",
+  CURLOPT_URL => "https://api.aiforthai.in.th/ssense",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_CUSTOMREQUEST => "test",
+  CURLOPT_POSTFIELDS => "",
   CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/x-www-form-urlencoded",
     "Apikey: lkEUrfOpTvUCOISqVdFDkm1KPyFpsLOz"
   )
 ));
@@ -76,8 +83,8 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
  
 curl_close($curl);
- 
-if ($err) {
+
+		if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   echo $response;
@@ -90,14 +97,15 @@ if ($err) {
       "เป็นบวก " .$arr[sentiment]['polarity-pos']. "<br>", 
       "แนวโน้ม " .$arr[sentiment]['polarity']. "<br>"; 
 }
+	//} else {
+//echo "No Word";			
+	
+	
 ?>
 <form method="post" target="_blank">
 	<input type="text" name="q" maxlength="5000" required> 
     <button>Input words</button><br><br>
-}
-}
-    
+   
 </form>
 </body>
 </html>
-<?php  ob_end_flush();  ?>
