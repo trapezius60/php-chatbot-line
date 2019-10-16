@@ -87,7 +87,7 @@ if ($err) {
 
   //echo $response;
    $arr = json_decode($response, true);
-     echo "คำที่ใช้ประเมิน " .$arr[preprocess]['input']. "<br>", 
+     echo "คำที่ใช้ประเมิน " .$arr[@preprocess]['input']. "<br>", 
      "ความเชื่อมั่น (%) " .$arr[sentiment]['score']. "<br>",
       "เป็นลบ " .$arr[sentiment]['polarity-neg']. "<br>", 
       "เป็นบวก " .$arr[sentiment]['polarity-pos']. "<br>", 
