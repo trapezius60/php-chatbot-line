@@ -47,6 +47,7 @@
 <body>
 
 <form method="get" target="_blank">
+	<textarea name="q" cols="40" rows="4">ใส่ข้อความลงในช่องนี้</textarea>
 	<input type="text" type="submit" name="q" maxlength="5000" required>       
         <button>Input words</button><br><br>
 </form>
@@ -79,7 +80,7 @@ if ($err) {
 } else {
   //echo $response;
    $arr = json_decode($response, true);
-     echo "ข้อความที่ใช้ประเมิน คือ " .$arr[@preprocess]['input'].  "<br>", 
+     echo "ข้อความที่ใช้ประเมิน คือ " "<center>" "<b>".$arr[@preprocess]['input']. "<b/>"  "<br>", 
      "ข้อความดังกล่าวมีแนวโน้มแนวโน้ม " .$arr[@sentiment]['polarity'].  " ด้วยความเชื่อมั่นร้อยละ " .$arr[@sentiment]['score'] ;      
 }
 ?>
