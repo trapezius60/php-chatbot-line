@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GenerateQRcode</title>
+<title>SentinelAnalysis</title>
 <style>
 	* {
 		font: 14px tahoma;
@@ -88,10 +88,10 @@ if ($err) {
   //echo $response;
    $arr = json_decode($response, true);
      echo "คำที่ใช้ประเมิน " .$arr[@preprocess]['input']. "<br>", 
-     "ความเชื่อมั่น (%) " .$arr[sentiment]['score']. "<br>",
-      "เป็นลบ " .$arr[sentiment]['polarity-neg']. "<br>", 
-      "เป็นบวก " .$arr[sentiment]['polarity-pos']. "<br>", 
-      "แนวโน้ม " .$arr[sentiment]['polarity']. "<br>"; 
+     "ความเชื่อมั่น (%) " .$arr[@sentiment]['score']. "<br>",
+      "เป็นลบ " .$arr[@sentiment]['polarity-neg']. "<br>", 
+      "เป็นบวก " .$arr[@sentiment]['polarity-pos']. "<br>", 
+      "แนวโน้ม " .$arr[@sentiment]['polarity']. "<br>"; 
  
 }
 	
