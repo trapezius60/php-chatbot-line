@@ -90,7 +90,7 @@ if ($err) {
 $arr = json_decode($response, true);
   //echo $arr[Original];
 	
-	 $str = str_replace("\r\n","",$arr[Original]);
-	echo $star;
+	 $str = str_replace("\n","",$arr[Original]);
+	echo $str;
 }
 ?>
