@@ -89,6 +89,8 @@ if ($err) {
 } else {
 $arr = json_decode($response, true);
   //echo $arr[Original];
-	echo $str=str_replace("\r\n","",$arr);
+	
+	 $str = str_replace("\r\n","",$arr[Original]);
+	echo $star;
 }
 ?>
