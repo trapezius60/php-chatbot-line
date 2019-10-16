@@ -47,7 +47,7 @@
 <body>
 
 <form method="get" target="_blank">
-	<textarea name="q" cols="40" rows="4">ใส่ข้อความลงในช่องนี้</textarea>
+	<textarea name="q" cols="40" input type="text" type="submit" rows="4" required>ใส่ข้อความลงในช่องนี้</textarea>
 	<input type="text" type="submit" name="q" maxlength="5000" required>       
         <button>Input words</button><br><br>
 </form>
