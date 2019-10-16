@@ -26,7 +26,7 @@
 		margin-right: -3px;
 		padding-left: 1px;
 		padding-right: 1px;
-		height: 100px;
+		height: 24px;
 		margin-bottom: 1px;
 	}
 	button {
@@ -37,7 +37,7 @@
 		border-radius: 0px 4px 4px 0px; 
 		font-weight: bold;
 		margin-left: -3px; 
-		height: 108px;
+		height: 28px;
 	}
 	button:hover {
 		color: aqua;
