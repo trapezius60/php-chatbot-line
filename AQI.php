@@ -117,7 +117,7 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
 define('LINE_API',"https://notify-api.line.me/api/notify");
  
 $token = "Ei5KLzQrNizl4HZfnQIFzKQeAZYoNYUUzcsWgSX5BWu"; //ใส่Token ที่copy เอาไว้
-$str = $response
+$str = $response;
 
 
 	
