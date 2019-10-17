@@ -1,0 +1,14 @@
+<title>Glastopf Observation Center</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function() {
+$.ajaxSetup({ cache: false }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
+setInterval(function() {
+$('#results').load('AQI.php');
+}, 2000); // the "3000" here refers to the time to refresh the div. it is in milliseconds.
+});
+// ]]>
+</script>
+
+<div id="results">Loading data ...</div>
