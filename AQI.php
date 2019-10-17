@@ -49,7 +49,7 @@
 
 <body>
   
-<?php header header ('Refresh: 10');
+<?php header ('Refresh: 10');
 
 // List country
 //api.airvisual.com/v2/countries?key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
