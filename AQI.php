@@ -49,7 +49,7 @@
 
 <body>
   
-<?php header('refresh: 2; url= api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844' ); 
+<?php header header ('Refresh: 10');
 
 // List country
 //api.airvisual.com/v2/countries?key=c97b1c11-d68f-4acc-9ac9-13f8673e2844
