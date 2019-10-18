@@ -23,11 +23,11 @@ if ($WEBSITE_ENVIRONMENT =="Development") {
 
 } else {
 
-	$cleardb_url 		= parse_url(getenv("mysql://b4d4ed34e9b742:e8ba9c70@us-cdbr-iron-east-05.cleardb.net/heroku_04736a2bbd78072?reconnect=true"));
-	$host				= $cleardb_url["us-cdbr-iron-east-05.cleardb.net"];
-	$user 				= $cleardb_url["b4d4ed34e9b742"];
-	$password			= $cleardb_url["e8ba9c70"];
-	$database 			= substr($cleardb_url["heroku_04736a2bbd78072"],1);
+	$cleardb_url 		= parse_url(getenv("DATABASE_URL"));
+	$host				= $cleardb_url[getenv("DATABASE_HOST")];
+	$user 				= $cleardb_url[getenv("DATABASE_USER")];
+	$password			= $cleardb_url[getenv("DATABASE_PASSWORD")];
+	$database 			= substr($cleardb_url[getenv("DATABASE_NAME")],1);
 
 	define("APP_ENVIRONMENT", "Production");
 	define("APP_BASE_URL", "https://dashboard.heroku.com");
