@@ -130,10 +130,10 @@ $token = "Ei5KLzQrNizl4HZfnQIFzKQeAZYoNYUUzcsWgSX5BWu"; //ใส่Token ที�
 $res = notify_message($str,$token);
 print_r($res);
 function notify_message($message,$token){
-$photo=$_GET["photo"];
- $image_thumbnail_url = "https://downloads.intercomcdn.com/i/o/124829723/8c0318000b236dcee232bfbd/upload_17692440330381041827.png";
-$image_fullsize_url = $photo; //max size 1024x1024px JPEG
- $queryData = array('imageThumbnail' => $image_thumbnail_url,'imageFullsize' => $image_fullsize_url,'message' => $message);
+//$photo=$_GET["photo"];
+ //$image_thumbnail_url = "https://downloads.intercomcdn.com/i/o/124829723/8c0318000b236dcee232bfbd/upload_17692440330381041827.png";
+//$image_fullsize_url = $photo; //max size 1024x1024px JPEG
+ $queryData = array('message' => $message);
  $queryData = http_build_query($queryData,'','&');
  $headerOptions = array( 
          'http'=>array(
