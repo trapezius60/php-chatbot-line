@@ -106,8 +106,7 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
             "AQI (US AQI) " .$arr[data][current][pollution]['aqius'];
 	
 if($arr[data][current][pollution]['aqius']>"50"){
-	 $str =  "AQI (US AQI) " .$arr[data][current][pollution]['aqius']. "<br>",
-	"AQI อยู่ในค่า 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพดี ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous)";
+	 $str =  "AQI (US AQI) " .$arr[data][current][pollution]['aqius']. "AQI อยู่ในค่า 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพดี ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous)";
 	
 	}
 } 
@@ -136,7 +135,7 @@ function notify_message($message,$token){
  $context = stream_context_create($headerOptions);
  $result = file_get_contents(LINE_API,FALSE,$context);
  $res = json_decode($result);
- return $res;
+ //return $res;
 
 }
 //https://havespirit.blogspot.com/2017/02/line-notify-php.html
