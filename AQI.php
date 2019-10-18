@@ -116,6 +116,8 @@ if($arr[data][current][pollution]['aqius']>"50"){
         //"สภาพอากาศ:: ". "<br>",
             "อุณหภูมิ (เซลเซียส) " .$arr[data][current][weather]['tp']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
+	    "ความเร็วลม (m/s) " .$arr[data][current][weather]['ws']. "<br>",
+	    "icon " .$arr[data][current][weather]['ic']. "<br>", 
           "AQI:: ". "<br>",
             "AQI (US AQI) " .$arr[data][current][pollution]['aqius']. "<br>",
 	  $str;
