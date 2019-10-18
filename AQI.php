@@ -106,7 +106,7 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
             "AQI (US AQI) " .$arr[data][current][pollution]['aqius'];
 	
 if($arr[data][current][pollution]['aqius']>"50"){
-	 $str =  "AQI (US AQI) " .$arr[data][current][pollution]['aqius']. "AQI อยู่ในค่า 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพดี ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous)";
+	 $str =  "AQI (US AQI) " .$arr[data][current][pollution]['aqius']. "   ค่า AQI อยู่ระหว่าง 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพดี ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous) ศึกษาเพิ่มเติม https://support.airvisual.com/en/articles/3029425-what-is-aqi";
 	
 	}
 } 
