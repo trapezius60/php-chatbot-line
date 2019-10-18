@@ -104,20 +104,23 @@ echo "ประเทศ " .$arr[data]['country']. "<br>",
             "ความชื้น (%) " .$arr[data][current][weather]['hu']. "<br>",
           "AQI:: ". "<br>",
             "AQI (US AQI) " .$arr[data][current][pollution]['aqius'];
-  
+	
+if($arr[data][current][pollution]['aqius']>"50"){
+	 $str =  "AQI (US AQI) " .$arr[data][current][pollution]['aqius'];
+	
+	}
+	
 } 
 
-?>
-  <p> <a href = "https://www.airvisual.com/thailand/nakhon-ratchasima" target = "_blank">Link AQI visual</p> 
-</body>
-</html>
-<?php  ob_end_flush();  ?>
 
-<?php
+
+
+
+
 define('LINE_API',"https://notify-api.line.me/api/notify");
  
 $token = "Ei5KLzQrNizl4HZfnQIFzKQeAZYoNYUUzcsWgSX5BWu"; //ใส่Token ที่copy เอาไว้
-$str = $response;
+//$str = $response;
 
 
 	
@@ -143,4 +146,8 @@ function notify_message($message,$token){
 }
 //https://havespirit.blogspot.com/2017/02/line-notify-php.html
 //https://medium.com/@nattaponsirikamonnet/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87-line-notify-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99-65a7fc83d97f
+
 ?>
+  <p> <a href = "https://www.airvisual.com/thailand/nakhon-ratchasima" target = "_blank">Link AQI visual</p> 
+</body>
+</html>
