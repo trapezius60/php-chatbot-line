@@ -16,13 +16,11 @@
         const stringifiedResult = JSON.stringify(result);
         alert(stringifiedResult);
         document.getElementById("scanCode").textContent = stringifiedResult;
-         
-          
-// prints url because we can access the data
+        webseiteUrl = stringifiedResult.value;
       });
     }
     liff.init({ liffId: "1551802013-NaJR7mEg" }, () => {}, err => console.error(err.code, error.message));
-    console.log(stringifiedResult.value); 
+    
   </script>
 </body>
 </html>
