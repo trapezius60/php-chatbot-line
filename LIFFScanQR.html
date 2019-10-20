@@ -16,6 +16,9 @@
         const stringifiedResult = JSON.stringify(result);
         alert(stringifiedResult);
         document.getElementById("scanCode").textContent = stringifiedResult;
+          const object = JSON.parse(stringifiedResult); // we convert it to an object
+          console.log(object.value); 
+// prints url because we can access the data
       });
     }
     liff.init({ liffId: "1551802013-NaJR7mEg" }, () => {}, err => console.error(err.code, error.message));
