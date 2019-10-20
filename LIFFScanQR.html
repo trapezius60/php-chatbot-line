@@ -15,7 +15,7 @@
       liff.scanCode().then(result => {
         const stringifiedResult = JSON.stringify(result);
         alert(stringifiedResult);
-        document.getElementById("scanCode").textContent = JSON.parse(stringifiedResult).value; // JSON.parse แปลง JSON object มาเป็น text
+        document.getElementById("scanCode").innerHTML = JSON.parse(stringifiedResult).value; // JSON.parse แปลง JSON object มาเป็น text
         
       });
     }
