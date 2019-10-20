@@ -15,8 +15,8 @@
       liff.scanCode().then(result => {
         const stringifiedResult = JSON.stringify(result);
         alert(stringifiedResult);
-        document.getElementById("scanCode").textContent = stringifiedResult;
-        webseiteUrl = stringifiedResult.value;
+        document.getElementById("scanCode").textContent = stringifiedResult.value;
+        
       });
     }
     liff.init({ liffId: "1551802013-NaJR7mEg" }, () => {}, err => console.error(err.code, error.message));
