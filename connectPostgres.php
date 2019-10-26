@@ -24,8 +24,15 @@ $query = 'CREATE TABLE mytable (
 );';
 $db->query($query);
 
-$query = 'INSERT INTO mytable (facebookid,mytext,inserted) VALUES (1603196280,test,now());';
+$query = 'INSERT INTO mytable (facebookid,mytext,inserted) VALUES (1603196280,"test",now());';
 $db->query($query);
 var_dump($db->errorInfo());
+
+$query = 'SELECT * FROM mytable;';
+$result = $db->query($query);
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+	var_dump($row);
+}
+$result->closeCursor();
 ?>
 
