@@ -19,13 +19,13 @@ catch(PDOException $pe)
 $query = 'CREATE TABLE mytable (
     id SERIAL,
     facebookid BIGSERIAL,
-   
+    text TEXT,
     inserted TIMESTAMP
 );';
 $db->query($query);
 
-$query = 'INSERT INTO mytable (facebookid,inserted)'
-    . ' VALUES (1603196280,now());';
+$query = 'INSERT INTO mytable (facebookid, text, inserted)'
+    . ' VALUES (1603196280,"text",now());';
 $db->query($query);
 var_dump($db->errorInfo());
 
