@@ -15,6 +15,7 @@ catch(PDOException $pe)
 	die('Connection error, because: ' .$pe->getMessage());
 
 }
+
 $query = 'CREATE TABLE mytable (
     id SERIAL,
     facebookid BIGSERIAL,
@@ -23,7 +24,7 @@ $query = 'CREATE TABLE mytable (
 );';
 $db->query($query);
 
-$query = 'INSERT INTO mytable (facebookid,mytext,inserted) VALUES (1603196280,"test",now());';
+$query = 'INSERT INTO mytable (facebookid,mytext,inserted) VALUES (1603196280,test,now());';
 $db->query($query);
 var_dump($db->errorInfo());
 ?>
