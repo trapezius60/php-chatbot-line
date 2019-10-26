@@ -19,7 +19,7 @@ catch(PDOException $pe)
 $query = 'CREATE TABLE mytable (
     id SERIAL,
     facebookid BIGSERIAL,
-    mytext TEXT,
+    mytext Varchar,
     inserted TIMESTAMP
 );';
 $db->query($query);
