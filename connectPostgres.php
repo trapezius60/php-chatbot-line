@@ -15,8 +15,8 @@ catch(PDOException $pe)
 	die('Connection error, because: ' .$pe->getMessage());
 
 }
-
-$query = 'CREATE TABLE mytable (
+DROP TABLE mytable;
+$query = 'CREATE TABLE mytable01 (
     id SERIAL,
     facebookid BIGSERIAL,
     mytext CHAR(50),
