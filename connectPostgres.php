@@ -31,7 +31,7 @@ $query = 'INSERT INTO AQI (Province, City, AQI,Temp,Moise,Wind,data_created)'
     .'VALUES ("Korat","Korat","50","25","20","15",now());';
 $db->query($query);
 var_dump($db->errorInfo());
-$query = 'SELECT * FROM mytable;';
+$query = 'SELECT * FROM AQI;';
 $result = $db->query($query);
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 	var_dump($row);
