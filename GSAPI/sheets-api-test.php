@@ -9,9 +9,9 @@ include_once "google-api-php-client/examples/templates/base.php";
  ************************************************/
 require_once realpath(dirname(__FILE__) . '/google-api-php-client/src/Google/autoload.php');
 
-$client_id = '460d4c42098fe914bbf0949172fd34bb5ea48d2b';
-$service_account_name = 'gsapi-332@praxis-wall-257209.iam.gserviceaccount.com';  // email address
-$key_file_location = 'GSAPI/sheets_api_secret.json'; //key.p12
+$client_id = 'xxx';
+$service_account_name = 'xxx';  // email address
+$key_file_location = 'xxx'; //key.p12
 
 echo pageHeader("Service Account Access");
 if (strpos($client_id, "googleusercontent") == false
