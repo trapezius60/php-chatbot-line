@@ -13,23 +13,24 @@ try
 catch(PDOException $pe)
 {
 	die('Connection error, because: ' .$pe->getMessage());
-
 }
-$sql2 = 'DROP TABLE mytable';
-$result2 = $db->query($query2);
-$query = 'CREATE TABLE mytable01 (
-    id SERIAL,
-    facebookid BIGSERIAL,
-    mytext CHAR(50),
-    inserted TIMESTAMP
+
+
+$query = 'CREATE TABLE AQI (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+	Province VARCHAR(50),
+	City VARCHAR(50),
+    AQI VARCHAR(10),
+	Temp VARCHAR(10),
+	Moise VARCHAR(10),
+	Wind VARCHAR(10),
+    data_created DATETIME
 );';
 $db->query($query);
-
-$query = 'INSERT INTO mytable (facebookid, mytext, inserted)'
-    .'VALUES (1603196280,"text",now());';
+$query = 'INSERT INTO AQI (Province, City, AQI,Temp,Moise,Wind,data_created)'
+    .'VALUES ("Korat","Korat","50","25","20","15",now());';
 $db->query($query);
 var_dump($db->errorInfo());
-
 $query = 'SELECT * FROM mytable;';
 $result = $db->query($query);
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -37,4 +38,3 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 }
 $result->closeCursor();
 ?>
-
