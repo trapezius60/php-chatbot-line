@@ -107,7 +107,7 @@ if ($arr[data][current][pollution]['aqius'] <"51") {
 	$str =  "AQI (US AQI) = " .$arr[data][current][pollution]['aqius'].  $recommendSevere. "   [ค่า AQI อยู่ระหว่าง 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพเริ่มไม่ดี, ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous); ศึกษาเพิ่มเติม >>> https://support.airvisual.com/en/articles/3029425-what-is-aqi]";
 } elseif ($arr[data][current][pollution]['aqius'] >"150") {
 	$str =  "AQI (US AQI) = " .$arr[data][current][pollution]['aqius']. $recommendUnhealthy. "   [ค่า AQI อยู่ระหว่าง 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพเริ่มไม่ดี, ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous); ศึกษาเพิ่มเติม >>> https://support.airvisual.com/en/articles/3029425-what-is-aqi]";
-} else ($arr[data][current][pollution]['aqius'] >"300") {
+} elseif ($arr[data][current][pollution]['aqius'] >"300") {
 	$str =  "AQI (US AQI) = " .$arr[data][current][pollution]['aqius'].  $recommendHazadous. "   [ค่า AQI อยู่ระหว่าง 0-500, ค่าเกิน 50 ถือว่าอากาศคุณภาพเริ่มไม่ดี, ค่าเกิน 300 ถือว่า อันตรายร้ายแรง (hazardous); ศึกษาเพิ่มเติม >>> https://support.airvisual.com/en/articles/3029425-what-is-aqi]";
 } 
 	echo "ประเทศ " .$arr[data]['country']. "<br>",
