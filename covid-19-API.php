@@ -24,5 +24,7 @@ if ($err) {
 echo "cURL Error #:" . $err;
 } else {
 echo $response;
+ // Decode JSON data to PHP associative array
+$arr = json_decode($response, true);
 }
 ?>
