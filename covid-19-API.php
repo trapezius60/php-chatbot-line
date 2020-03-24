@@ -7,12 +7,12 @@ CURLOPT_URL => "https://opend.data.go.th/get-ckan/datastore_search?resource_id=9
 CURLOPT_RETURNTRANSFER => true,
 CURLOPT_ENCODING => "",
 CURLOPT_MAXREDIRS => 10,
-CURLOPT_TIMEOUT => 0,
+CURLOPT_TIMEOUT => 30,
 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 CURLOPT_CUSTOMREQUEST => "GET",
 CURLOPT_HTTPHEADER => array(
- "api-key:tg2XPZo23UOjWWWpNpCRIejyQyvbIzKf"
- )
+ "api-key: tg2XPZo23UOjWWWpNpCRIejyQyvbIzKf"
+ ),
 ));
  
 $response = curl_exec($curl);
@@ -26,6 +26,6 @@ echo "cURL Error #:" . $err;
 
  // Decode JSON data to PHP associative array
 $arr = json_decode($response, true);
- echo $response;
+ echo $arr;
 }
 ?>
