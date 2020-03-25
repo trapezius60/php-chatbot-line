@@ -3,7 +3,7 @@
 $curl = curl_init();
  
 curl_setopt_array($curl, array(
-CURLOPT_URL => "https://opend.data.go.th/opend-search/vir_1480_1579254770/agg?dsname=vir_1480_1579254770&path=vir_1480_1579254770&aggf=count&agg_prop=col_2&groupby=col_7&property=col_5&operator=GT&valueLiteral=10000000&loadAll=1&type=json&limit=100&offset=0",
+CURLOPT_URL => "https://opend.data.go.th/get-ckan/datastore_search?resource_id=93f74e67-6f76-4b25-8f5d-b485083100b6&limit=5",
 CURLOPT_RETURNTRANSFER => true,
 CURLOPT_ENCODING => "",
 CURLOPT_MAXREDIRS => 10,
