@@ -12,7 +12,7 @@ CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 CURLOPT_CUSTOMREQUEST => "GET",
 CURLOPT_HTTPHEADER => array(
  "api-key:tg2XPZo23UOjWWWpNpCRIejyQyvbIzKf"
-)
+),
 ));
  
 $response = curl_exec($curl);
@@ -25,8 +25,8 @@ echo "cURL Error #:" . $err;
 } else {
 
  // Decode JSON data to PHP associative array
-$arr = json_decode($response, true);
+//$arr = json_decode($response, true);
  echo $response;
- echo $arr;
+ 
 }
 ?>
