@@ -72,7 +72,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=c97b1c11-d68f-4acc-9ac9-13f8673e2844",
+  CURLOPT_URL => "api.airvisual.com/v2/city?city=Nakhon%20Ratchasima&state=Nakhon%20Ratchasima&country=Thailand&key=08f5ea70-e3e7-402d-8676-ce6734e5bbb8", //หมดอายุ 1 ปี นับจาก ตค 63
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
